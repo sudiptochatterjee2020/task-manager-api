@@ -6,7 +6,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const sendWelcomeEmail = (email, name) => {
     const welcomeMsg = {
         to: email,
-        from: 'sudiptochatterjee@gmail.com',
+        from: process.env.ADMIN_MAIL_ID,
         subject: `Welcome ${name} to the task manager application!`,
         text: `Thank you ${name} for choosing the task manager application. Let me know how you get along with the app.`
     }
